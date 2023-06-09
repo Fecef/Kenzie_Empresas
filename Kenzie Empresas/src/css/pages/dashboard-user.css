@@ -1,0 +1,50 @@
+.dashboard .card-wrapper .card {
+  min-width: 28rem;
+  width: 40rem;
+  height: 50rem;
+}
+.dashboard .card-wrapper .card .modalidade {
+  border: 1px solid var(--color-contrast);
+  border-radius: var(--radius-1);
+  padding: 0.5rem 1rem;
+}
+.dashboard .card-wrapper .employers {
+  gap: 2rem;
+  flex: 0 85rem;
+  max-height: 50rem;
+  overflow-y: auto;
+}
+.dashboard .card-wrapper .employers td {
+  font-weight: var(--weight-2);
+}
+.dashboard .card-wrapper .employers .employList {
+  align-self: ;
+}
+.dashboard .card-wrapper .employers table {
+  font-size: initial;
+  color: var(--color-primary-1);
+}
+/* Modal */
+.modal-content {
+  background-color: var(--color-bg-1);
+  padding: 2rem;
+}
+.modal-header h1 {
+  font-family: var(--roboto);
+  color: var(--color-primary-1);
+}
+.modal-body form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.modal-body form div {
+  display: flex;
+  flex-direction: column;
+}
+.modal-body form label {
+  color: var(--color-primary-1);
+}
+.modal-body form div input {
+  width: 100%;
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Entrega - Kenzie Empresas" />
+    <title>Entrega - Kenzie Empresas</title>
+
+    <!-- * Google Fonts Poppins 400/700 & Roboto 400/700 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- * Stylesheets-->
+    <!-- Bootstrap v5.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/animation.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/pages/dashboard-user.css" />
+
+    <!-- * Favicon -->
+    <link rel="shortcut icon" href="https://kenzie.com.br/favicon.jpeg" type="image/x-icon" />
+
+    <!-- * Scripts -->
+    <!-- Bootstrap v5.2 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- Fonts Awesome -->
+    <script defer src="https://kit.fontawesome.com/a79ad14f46.js" crossorigin="anonymous"></script>
+    <!-- Dark Mode -->
+    <script defer src="../js/darkmode.js"></script>
+    <!-- Axios -->
+    <script defer src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Index.html -->
+    <script defer type="module" src="../js/pages/dashboard-user.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <img src="../assets/logo.png" alt="Kenzie Business Logo" title="Kenzie Business">
+
+            <menu id="navbar">
+                <li id="editAcc" data-bs-toggle="modal" data-bs-target="#editAccModal">Alterar Dados</li>
+                <li id="darkbtn">Dark Mode <i class="fa-solid fa-lightbulb"></i></li>
+                <li class="bg-contrast"><a href="../../index.html">Sair</a></li>
+            </menu>
+
+            <i class="fa-solid fa-bars"></i>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="dashboard">
+            <h1>Informações Gerais
+                <hr>
+                <div class="card-wrapper">
+                    <menu>
+                        <li id="user-data" class="card">
+                            <!-- <div>
+                                <h2>Felipe César</h2>
+                                <small>fecef.figueiredo@gmail.com</small>
+                                <hr>
+                            </div>
+                            <div>
+                                <h2>Nerd lab</h2>
+                                <small class="modalidade">Departamento de TI</small>
+                            </div>
+                            <div>
+                                <hr>
+                                <small>Sênior</small>
+                            </div> -->
+                        </li>
+                        <li class="card employers">
+                            <div>
+                                <h2></h2>
+                                <small>Funcionários</small>
+                                <hr>
+                            </div>
+                            <div class="employList">
+                                <table id="contratados" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Nome</th>
+                                            <th scope="col">Nível</th>
+                                            <th scope="col">Modalidade</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <!-- <tr>
+                                            <td>João</td>
+                                            <td>Maria</td>
+                                            <td>Vovó</td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div>
+                                <hr>
+                                <small></small>
+                            </div>
+                        </li>
+                    </menu>
+                </div>
+            </h1>
+        </section>
+    </main>
+
+    <footer>
+        <address class="container">
+            <a href="https://github.com/Fecef">
+                <i class="fa-brands fa-square-github"></i> github.com/Fecef
+            </a>
+            <a href="https://www.linkedin.com/in/fecef/">
+                <i class="fa-brands fa-linkedin"></i>linkedin.com/in/fecef/
+            </a>
+        </address>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="editAccModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="staticBackdropLabel">Alterar Dados</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editAccModalForm">
+                        <div>
+                            <label class="form-label" for="username">Username</label>
+                            <input type="text" class="form-input" name="username" id="username" autocomplete="off"
+                                required>
+                        </div>
+                        <div>
+                            <label class="form-label" for="email">E-mail</label>
+                            <input type="text" class="form-input" name="email" id="email" autocomplete="off" required>
+                        </div>
+                        <div>
+                            <label class="form-label" for="password">Senha</label>
+                            <input type="password" class="form-input" name="password" id="password" autocomplete="off"
+                                required>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary align-self-end">Confirmar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</html>

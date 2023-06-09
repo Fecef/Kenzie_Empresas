@@ -1,0 +1,112 @@
+#newCompany .newCompan-header select {
+  width: 18rem;
+  max-width: 100%;
+}
+#newCompany .card .card-btn {
+  display: flex;
+  justify-content: space-evenly;
+}
+#newCompany .card .card-btn .btn {
+  font-size: var(--fsize-5);
+}
+#allEmployees table {
+  color: var(--color-primary-1);
+}
+#departaments ul,
+#allEmployees ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 2rem;
+  max-height: 20rem;
+  padding: 2rem 0;
+  overflow-x: auto;
+}
+#departaments .btn-depart {
+  background-color: transparent;
+  border: none;
+}
+#departaments .btn-depart::before {
+  content: "\f055";
+  font: normal normal normal 2rem FontAwesome;
+  margin-right: 1rem;
+  vertical-align: middle;
+  color: var(--color-contrast);
+}
+#allEmployees ul li {
+  list-style: square;
+}
+#allEmployees .fa-trash {
+  color: var(--color-grey-2);
+  cursor: pointer;
+  font-size: 2rem;
+}
+#companyDepart .modal-footer button:last-child {
+  background-color: #ff0000;
+  color: var(--color-grey-5);
+}
+#companyDepart .modal-footer input {
+  max-width: 100%;
+}
+#allEmployees .modal-body,
+#companyDepart .modal-body {
+  color: var(--color-primary-1);
+  overflow-y: auto;
+}
+#companyDepart .modal-body h4 {
+  font-size: var(--fsize-3);
+  border-bottom: 1px solid black;
+  margin: 2rem 0;
+}
+#allEmployees .modal-content,
+#companyDepart .modal-content {
+  min-height: 54rem;
+  max-height: 54rem;
+}
+#companyDepart .table {
+  color: var(--color-primary-1);
+}
+#companyDepart .table td {
+  word-wrap: break-word;
+}
+#companyDepart .table .fa-square-plus {
+  color: green;
+  cursor: pointer;
+  font-size: 2rem;
+}
+#companyDepart .table .fa-square-minus {
+  color: red;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+table th {
+  font-weight: 700;
+}
+/* Modal */
+.modal-content {
+  padding: 2rem;
+  background-color: var(--color-bg-1);
+}
+.modal-header h1 {
+  font-family: var(--roboto);
+  color: var(--color-primary-1);
+}
+.modal-body form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.modal-body li button {
+  color: var(--color-primary-1);
+}
+.modal-body form div {
+  display: flex;
+  flex-direction: column;
+}
+.modal-body form label {
+  color: var(--color-primary-1);
+}
+.modal-body form div input {
+  width: 100%;
+}

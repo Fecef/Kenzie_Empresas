@@ -1,0 +1,217 @@
+:root {
+  font-size: 10px;
+
+  /* Colors */
+  --color-primary-1: #203864;
+  --color-bg-2: #203864;
+  --color-grey-1: #4d6083;
+  --color-grey-2: #7988a2;
+  --color-grey-3: #495057;
+  --color-grey-4: #a6afc1;
+  --color-grey-5: #e9ebf0;
+  --color-bg-1: #e9ebf0;
+  --color-contrast: #78a21e;
+
+  /* Font-Families */
+  --roboto: "Roboto", sans-serif;
+  --poppins: "Poppins", sans-serif;
+
+  /* Font-Sizes */
+  --fsize-1: 2.8rem;
+  --fsize-2: 2rem;
+  --fsize-3: 1.6rem;
+  --fsize-4: 1.4rem;
+  --fsize-5: 1.2rem;
+
+  /* Font-Weights */
+  --weight-1: 700;
+  --weight-2: 400;
+
+  /* Line-Heigts */
+  --lineH-1: 4rem;
+  --lineH-2: 2.8rem;
+  --lineH-3: 2.4rem;
+  --lineH-4: 1.6rem;
+
+  /* Border Radius*/
+  --radius-1: 0.8rem;
+  --radius-2: 0.4rem;
+}
+
+.darkmode {
+  font-size: 10px;
+
+  /* Colors */
+  --color-primary-1: #e9ebf0;
+  --color-bg-2: #203864;
+  --color-grey-1: #4d6083;
+  --color-grey-2: #7988a2;
+  --color-grey-3: #495057;
+  --color-grey-4: #a6afc1;
+  --color-grey-5: #e9ebf0;
+  --color-bg-1: #2b2a33;
+  --color-contrast: #78a21e;
+
+  /* Font-Families */
+  --roboto: "Roboto", sans-serif;
+  --poppins: "Poppins", sans-serif;
+
+  /* Font-Sizes */
+  --fsize-1: 2.8rem;
+  --fsize-2: 2rem;
+  --fsize-3: 1.6rem;
+  --fsize-4: 1.4rem;
+  --fsize-5: 1.2rem;
+
+  /* Font-Weights */
+  --weight-1: 700;
+  --weight-2: 400;
+
+  /* Line-Heigts */
+  --lineH-1: 4rem;
+  --lineH-2: 2.8rem;
+  --lineH-3: 2.4rem;
+  --lineH-4: 1.6rem;
+
+  /* Border Radius*/
+  --radius-1: 0.8rem;
+  --radius-2: 0.4rem;
+}
+
+/* Body */
+body {
+  font-size: 1.6rem;
+  background-color: var(--color-bg-2);
+  font-family: var(--poppins);
+  margin-bottom: 15rem;
+}
+
+/* Header */
+header {
+  background-color: var(--color-bg-1);
+  padding: 2rem 0;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  transition-duration: 0.3s;
+}
+header nav img {
+  width: 7rem;
+}
+header nav menu {
+  display: none;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: var(--fsize-3);
+  gap: 1rem;
+  min-width: 100%;
+}
+header nav menu #sectors {
+  width: fit-content;
+}
+header nav .fa-bars {
+  position: absolute;
+  right: 3.9rem;
+  top: 2.9rem;
+  font-size: 4rem;
+  color: var(--color-primary-1);
+}
+header nav menu li {
+  padding: 1rem 2rem;
+  border-radius: var(--radius-2);
+  cursor: pointer;
+  transition-duration: 0.2s;
+  color: var(--color-primary-1);
+}
+header nav menu li:hover,
+header nav menu li:focus {
+  background-color: var(--color-bg-2);
+  color: var(--color-grey-5);
+}
+header nav menu li:last-child {
+  align-self: flex-start;
+}
+header nav menu li a {
+  color: var(--color-grey-5);
+}
+header nav menu li a:hover {
+  color: var(--color-grey-5);
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  padding: 2rem;
+  background-color: var(--color-bg-1);
+  width: 100%;
+}
+footer address {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  font-size: 2rem;
+}
+footer address a {
+  color: var(--color-primary-1);
+  transition-duration: 0.5s;
+}
+footer address a:hover {
+  transform: translateY(3px);
+}
+footer address a .fa-brands {
+  font-size: 3rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+/* General */
+h1 {
+  font-size: var(--fsize-1);
+  font-weight: var(--weight-1);
+  line-height: var(--lineH-1);
+}
+h2 {
+  font-size: var(--fsize-2);
+  font-weight: var(--weight-1);
+  line-height: var(--lineH-1);
+}
+h3 {
+  font-size: var(--fsize-3);
+  font-weight: var(--weight-1);
+  line-height: var(--lineH-2);
+}
+p {
+  font-size: var(--fsize-4);
+  font-weight: var(--weight-2);
+  line-height: var(--lineH-3);
+}
+small {
+  font-size: var(--fsize-5);
+  font-weight: var(--weight-2);
+  line-height: var(--lineH-4);
+}
+
+@media (min-width: 472px) {
+  /* Header */
+  header nav {
+    height: 8rem;
+  }
+  header nav img {
+    width: 10rem;
+  }
+  header nav menu {
+    display: flex;
+    flex-direction: row;
+    min-width: 0;
+    gap: 2rem;
+  }
+  header nav .fa-bars {
+    display: none;
+  }
+}
